@@ -1,5 +1,6 @@
 # ead-to-iiif-collection
-Convert an online EAD file to a IIIF Presentation API v3 based collection of manifests per inventory. This tool is tailored (and testen) with the online EAD files of the Dutch National Archives which contain links to the METS API of the National Archives and of course the IIIF Image v2 API.
+Convert an online EAD file to a IIIF Presentation API v3 based collection of manifests per inventory. This tool is tailored (and tested) with the online EAD files of the Dutch National Archives which contain links to the METS API of the National Archives and of course the IIIF Image v2 API.
+The resulting IIIF collection files can be viewed in a IIIF viewer or used as input for a HTR pipeline.
 
 ## Setup
 
@@ -38,9 +39,9 @@ Find the URL of an online EAD XML on the website of the Dutch National Archive u
 ./ead-to-iiif-collection.pl <URL>
 ```
 
-## Example
+## Example run
 
-When run on the EAD of the [3.01.27.07 Inventaris van de charters, behorende tot het archief van de Grafelijkheidsrekenkamer van Holland](https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07) archive via: 
+When run on the EAD of the [3.01.27.07](https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07)  _Inventaris van de charters, behorende tot het archief van de Grafelijkheidsrekenkamer van Holland_ archive via: 
 ```
 ./ead-to-iiif-collection.pl https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07/download/xml
 ```
@@ -56,4 +57,11 @@ Written manifest https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.
 Written collection https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07.jsonld (Inventaris van de charters, behorende tot het archief van de Grafelijkheidsrekenkamer van Holland) to ./output/NL-HaNA_3.01.27.07.jsonld with 3131 manifests referencing 5967 scans in total based on EAD https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07/download/xml
 ```
 
-When the generated IIIF collection is made available via a webserver, the collection can be easy visually checked by using the an IIIF viewer like [Theseus Viewer](https://theseusviewer.org/), in this example https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld
+When the generated IIIF collection is made available via a webserver, the collection can be easy visually checked by using an IIIF viewer like the [Theseus Viewer](https://theseusviewer.org/).
+
+## Some collection examples
+
+- [3.01.14.jsonld](https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.14.jsonld) - _Inventaris van het archief van Johan van Oldenbarnevelt, 1586-1619_ with **205** manifests referencing **833** scans in [Theseus Viewer](https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.14.jsonld)
+- [3.01.17.jsonld](https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.17.jsonld) - _Inventaris van het archief van Johan de Witt, raadpensionaris van Holland, 1653-1672_ with **205** manifests referencing **833** scans in [Theseus Viewer](https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.17.jsonld)
+- [3.01.27.07.jsonld](https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07.jsonld) - _Inventaris van de charters, behorende tot het archief van de Grafelijkheidsrekenkamer van Holland_ with **3.131** manifests referencing **5.967** scans in [Theseus Viewer](https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07.jsonld)
+- [3.19.10.jsonld](https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld) - _Inventaris van het archief van de Graven van Blois, 1304-1397_ with **205** manifests referencing **833** scans in [Theseus Viewer](https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld)
