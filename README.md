@@ -38,7 +38,9 @@ Find the URL of an online EAD XML on the website of the Dutch National Archive u
 ./ead-to-iiif-collection.pl <URL>
 ```
 
-#@ Output example
+## Output example
 
-When run on the EAD of the (3.19.10 Inventaris van het archief van de Graven van Blois, 1304-1397)[https://www.nationaalarchief.nl/onderzoeken/archief/3.19.10] via `./ead-to-iiif-collection.pl https://www.nationaalarchief.nl/onderzoeken/archief/3.19.10/download/xml` the generated IIIF collection is
-https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld  This IIIF collection (and associated manifest files per inventory item) can be easy visually checked by using the IIIF viewer Theseus, in this example https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld
+When run on the EAD of the [3.19.10 Inventaris van het archief van de Graven van Blois, 1304-1397](https://www.nationaalarchief.nl/onderzoeken/archief/3.19.10) via `./ead-to-iiif-collection.pl https://www.nationaalarchief.nl/onderzoeken/archief/3.19.10/download/xml` the generated IIIF collection (when made available via a webserver) is
+https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld  
+
+This IIIF collection (and associated manifest files per inventory item) can be easy visually checked by using the IIIF viewer Theseus, in this example https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld
