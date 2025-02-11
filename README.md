@@ -1,10 +1,10 @@
 # ead-to-iiif-collection
-Convert an online EAD file to a IIIF Presentation API v3 based collection of manifests per inventory. This tool is tailored (and tested) with the online EAD files of the Dutch National Archives which contain links to the METS API of the National Archives and of course the IIIF Image v2 API.
+Convert an online EAD file to a IIIF Presentation API v3 based collection of manifests per inventory. This tool is tailored (and tested) with the online EAD files of the Dutch National Archives which contain links to the METS API of the National Archives and of course the IIIF Image v2 API proviced by the National Archives.
 The resulting IIIF collection files can be viewed in a IIIF viewer or used as input for a HTR pipeline.
 
 ## Setup
 
-The harvest and conversion tool has been written in Perl. Perl is commonly pre-installed on many Linux distributions, as it has been a staple scripting language for system administration and web development for decades.
+This harvest and conversion tool has been written in Perl. Perl is commonly pre-installed on many Linux distributions, as it has been a staple scripting language for system administration and web development for decades.
 
 Perl version 5 is required as well as the Perl modules LWP::Simple, XML::LibXML, JSON, Digest::SHA and File::Path. These can be installed via:
 ```
@@ -18,9 +18,9 @@ chmod +x ead-to-iiif-collection.pl
 
 ## Configuration
 
-The configuration of tool is handled via environment variable:
+The configuration of the tool is handled via environment variables:
 
-- (required) EAD2IIF_BASE_URL - a base HTTP URL used for the URIs of the IIIF collection and associated IIIF manifests
+- (required) EAD2IIF_BASE_URL - a base HTTP URI used for the URIs of the IIIF collection and associated IIIF manifests
 - (optional) EAD2IIF_OUTPUT_DIR - directory where all files are written to (if the directory does not exist, it's created), default is ./output/
 - (optional) EAD2IIF_CACHE_DIR - directory where all harvested xml (EAD and METS) is cached (if the directory does not exist, it's created), default is ./cache/
 - (optional) EAD2IIF_VERBOSE - level of information printed to STDERR: 0 = silent (default), 1 = status info, 2 = process info
@@ -46,7 +46,7 @@ When run on the EAD of the [3.01.27.07](https://www.nationaalarchief.nl/onderzoe
 ./ead-to-iiif-collection.pl https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07/download/xml
 ```
 
-the verbose output reads:
+The verbose output reads:
 ```
 Written manifest https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07_720CHA2.1.jsonld to ./output/NL-HaNA_3.01.27.07_720CHA2.1.jsonld which references 2 scans
 Written manifest https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07_720CHA2.2.jsonld to./outpu/NL-HaNA_3.01.27.07_720CHA2.2.jsonld which references 3 scans
