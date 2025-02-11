@@ -13,6 +13,7 @@ cpan LWP::Simple XML::LibXML JSON Digest::SHA File::Path
 Make the file executable:
 ```
 chmod +x ead-to-iiif-collection.pl
+```
 
 ## Configuration
 
