@@ -1,5 +1,5 @@
 # ead-to-iiif-collection
-Convert an online EAD file of the Dutch National Archives to a IIIF Presentation API v3 based collection of manifests per inventory.
+Convert an online EAD file to a IIIF Presentation API v3 based collection of manifests per inventory. This tool is tailored (and testen) with the online EAD files of the Dutch National Archives which contain links to the METS API of the National Archives and of course the IIIF Image v2 API.
 
 ## Setup
 
@@ -38,9 +38,22 @@ Find the URL of an online EAD XML on the website of the Dutch National Archive u
 ./ead-to-iiif-collection.pl <URL>
 ```
 
-## Output example
+## Example
 
-When run on the EAD of the [3.19.10 Inventaris van het archief van de Graven van Blois, 1304-1397](https://www.nationaalarchief.nl/onderzoeken/archief/3.19.10) via `./ead-to-iiif-collection.pl https://www.nationaalarchief.nl/onderzoeken/archief/3.19.10/download/xml` the generated IIIF collection (when made available via a webserver) is
-https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld  
+When run on the EAD of the [3.01.27.07 Inventaris van de charters, behorende tot het archief van de Grafelijkheidsrekenkamer van Holland](https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07) archive via: 
+```
+./ead-to-iiif-collection.pl https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07/download/xml
+```
 
-This IIIF collection (and associated manifest files per inventory item) can be easy visually checked by using the IIIF viewer Theseus, in this example https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld
+the verbose output reads:
+```
+Written manifest https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07_720CHA2.1.jsonld to ./output/NL-HaNA_3.01.27.07_720CHA2.1.jsonld which references 2 scans
+Written manifest https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07_720CHA2.2.jsonld to./outpu/NL-HaNA_3.01.27.07_720CHA2.2.jsonld which references 3 scans
+...
+Written manifest https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07_755CHA1.jsonld to ./outpu/NL-HaNA_3.01.27.07_755CHA1.jsonld which references 5 scans
+Written manifest https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07_755CHA2.jsonld to ./outpu/NL-HaNA_3.01.27.07_755CHA2.jsonld which references 2 scans
+
+Written collection https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07.jsonld (Inventaris van de charters, behorende tot het archief van de Grafelijkheidsrekenkamer van Holland) to ./output/NL-HaNA_3.01.27.07.jsonld with 3131 manifests referencing 5967 scans in total based on EAD https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07/download/xml
+```
+
+When the generated IIIF collection are made available via a webserver, the collection can be easy visually checked by using the a IIIF viewer like [Theseus Viewer](https://theseusviewer.org/), in this example https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld
