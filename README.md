@@ -56,4 +56,4 @@ Written manifest https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.
 Written collection https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.01.27.07.jsonld (Inventaris van de charters, behorende tot het archief van de Grafelijkheidsrekenkamer van Holland) to ./output/NL-HaNA_3.01.27.07.jsonld with 3131 manifests referencing 5967 scans in total based on EAD https://www.nationaalarchief.nl/onderzoeken/archief/3.01.27.07/download/xml
 ```
 
-When the generated IIIF collection are made available via a webserver, the collection can be easy visually checked by using the a IIIF viewer like [Theseus Viewer](https://theseusviewer.org/), in this example https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld
+When the generated IIIF collection is made available via a webserver, the collection can be easy visually checked by using the an IIIF viewer like [Theseus Viewer](https://theseusviewer.org/), in this example https://theseusviewer.org/?iiif-content=https://www.goudatijdmachine.nl/omeka/files/ead2iiif/NL-HaNA_3.19.10.jsonld
